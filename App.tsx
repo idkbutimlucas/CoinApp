@@ -20,7 +20,6 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-   
     backgroundColor: '#8ef6e4',
     alignItems: 'center',
     paddingTop:75,
@@ -29,7 +28,7 @@ const styles = StyleSheet.create({
   title: {
     flex:1,
     alignItems: 'center',
-    backgroundColor:"#8ef6e4"
+    backgroundColor:"#8ef6e4",
     
   },
   buttonDoggo: {
@@ -40,7 +39,7 @@ const styles = StyleSheet.create({
   textBeforeButton: {
     fontSize:32,
     fontWeight:"bold",
-    color: "#d59bf6"
+    color: "#9896f1"
   },
 
   textButton: {
