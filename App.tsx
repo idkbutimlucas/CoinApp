@@ -1,64 +1,13 @@
-import { StatusBar } from "expo-status-bar";
-import { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Button } from "react-native-paper";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { DogScreen } from "./src/screens/DogScreen";
 
+const queryClient = new QueryClient();
 export default function App() {
-  const [visible, setVisible] = useState(false);
-  function handleRandomImage() {}
-
   return (
     <>
-      <View style={styles.container}>
-        <Text style={styles.mainTitle}>DoggoApp 🐶</Text>
-        <StatusBar style="auto" />
-      </View>
-
-      <View style={styles.title}>
-        <Text style={styles.textBeforeButton}>
-          If you want to see a Doggo, click here !✨
-        </Text>
-        <Button style={styles.buttonDoggo} onPress={handleRandomImage}>
-          <Text style={styles.textButton}>Doggo</Text>
-        </Button>
-      </View>
-
-      {visible && <Text>Rendered when `true`</Text>}
+      <QueryClientProvider client={queryClient}>
+        <DogScreen></DogScreen>
+      </QueryClientProvider>
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#8ef6e4",
-    alignItems: "center",
-    paddingTop: 75,
-    height: "25%",
-  },
-  mainTitle: {
-    color: "#9896f1",
-    fontSize: 25,
-    fontWeight: "bold",
-  },
-  title: {
-    flex: 1,
-    alignItems: "center",
-    backgroundColor: "#8ef6e4",
-  },
-  buttonDoggo: {
-    marginTop: 40,
-    backgroundColor: "#9896f1",
-    borderColor: "black",
-  },
-  textBeforeButton: {
-    fontSize: 32,
-    fontWeight: "900",
-    color: "#9896f1",
-    marginHorizontal: "5%",
-  },
-
-  textButton: {
-    color: "#fff",
-    fontWeight: "bold",
-  },
-});

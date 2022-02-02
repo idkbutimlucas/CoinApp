@@ -6,6 +6,6 @@ async function fetchData() {
   return json;
 }
 
-export function doggoData() {
+export function useRandomDog() {
   return useQuery(["doggo"], fetchData);
 }
