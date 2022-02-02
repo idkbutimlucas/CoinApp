@@ -6,7 +6,7 @@ export default function App() {
   return (
     <>
     <View style={styles.container}>
-      <Text>Welcome to DoggoApp ! 🐶</Text>
+      <Text style={styles.mainTitle}>DoggoApp 🐶</Text>
       <StatusBar style="auto" />
     </View>
 
@@ -25,6 +25,11 @@ const styles = StyleSheet.create({
     paddingTop:75,
     height:"25%"
   },
+  mainTitle:{
+    color:'#9896f1',
+    fontSize:25,
+    fontWeight:'bold',
+  },
   title: {
     flex:1,
     alignItems: 'center',
@@ -38,7 +43,7 @@ const styles = StyleSheet.create({
   },
   textBeforeButton: {
     fontSize:32,
-    fontWeight:"bold",
+    fontWeight:"900",
     color: "#9896f1"
   },
 
