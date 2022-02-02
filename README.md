@@ -6,3 +6,7 @@ Awesome App in React to fetch some Doggo !
 
 `yarn`
 `yarn start`
+
+# Expo Launch
+
+https://expo.dev/@corentyn/DoggoApp
