@@ -6,8 +6,6 @@ async function fetchData() {
   return json;
 }
 
-export function useStarships() 
-{
-  return useQuery(["starships"], fetchData);
-
+export function doggoData() {
+  return useQuery(["doggo"], fetchData);
 }
