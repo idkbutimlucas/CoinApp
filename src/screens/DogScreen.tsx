@@ -1,13 +1,13 @@
 import { StatusBar } from "expo-status-bar";
-import { useState } from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
-import { Button } from "react-native-paper";
+import React, { useState } from "react";
+import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
+import { Card } from "react-native-paper";
 import { useRandomDog } from "../hook/useRandomDog";
 
 export function DogScreen() {
   const [visible, setVisible] = useState(false);
-
-  const { isLoading, isError, data, refetch } = useRandomDog();
+  const { data } = useRandomDog();
+  const { isLoading, isError, refetch } = useRandomDog();
 
   function handleRandomImage() {
     setVisible(true);
@@ -15,72 +15,392 @@ export function DogScreen() {
   }
   return (
     <>
-      <View style={styles.container}>
-        <Text style={styles.mainTitle}>DoggoApp 🐶</Text>
-        <StatusBar style="auto" />
-      </View>
+      <ScrollView style={styles.bg}>
+        <View style={styles.container}>
+          <Text style={styles.mainTitle}>CoinApp 🚀</Text>
+          <StatusBar style="auto" />
+        </View>
 
-      <View style={styles.title}>
-        <Text style={styles.textBeforeButton}>
-          If you want to see a Doggo, click here !✨
-        </Text>
+        <View style={styles.title}>
+          <Text style={styles.textBeforeButton}>
+            You can follow your favorite Coin here ➡️
+          </Text>
+        </View>
 
-        <Image
-          style={styles.images}
-          source={{
-            uri: data.message,
-          }}
-        />
+        <View>
+          <Card style={styles.images}>
+            <Text>
+              {" "}
+              NAME :{" "}
+              {JSON.stringify(data[0].name).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              SYMBOLE :{" "}
+              {JSON.stringify(data[0].symbol).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              RANK :{" "}
+              {JSON.stringify(data[0].rank.replace('"', "").replace('"', ""))}
+            </Text>
+            <Text>
+              {" "}
+              PRICE :{" "}
+              {parseInt(
+                JSON.stringify(data[0].price).replace('"', "").replace('"', "")
+              ).toFixed(2)}
+              €
+            </Text>
+          </Card>
+          <Card style={styles.images}>
+            <Text>
+              {" "}
+              NAME :{" "}
+              {JSON.stringify(data[1].name).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              SYMBOLE :{" "}
+              {JSON.stringify(data[1].symbol).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              RANK :{" "}
+              {JSON.stringify(data[1].rank.replace('"', "").replace('"', ""))}
+            </Text>
+            <Text>
+              {" "}
+              PRICE :{" "}
+              {parseInt(
+                JSON.stringify(data[1].price).replace('"', "").replace('"', "")
+              ).toFixed(2)}
+              €
+            </Text>
+          </Card>
+          <Card style={styles.images}>
+            <Text>
+              {" "}
+              NAME :{" "}
+              {JSON.stringify(data[2].name).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              SYMBOLE :{" "}
+              {JSON.stringify(data[2].symbol).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              RANK :{" "}
+              {JSON.stringify(data[2].rank).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              PRICE :{" "}
+              {JSON.stringify(data[4].price).replace('"', "").replace('"', "")}€
+            </Text>
+          </Card>
+          <Card style={styles.images}>
+            <Text>
+              {" "}
+              NAME :{" "}
+              {JSON.stringify(data[3].name).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              SYMBOLE :{" "}
+              {JSON.stringify(data[3].symbol).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              RANK :{" "}
+              {JSON.stringify(data[3].rank).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              PRICE :{" "}
+              {parseInt(
+                JSON.stringify(data[3].price).replace('"', "").replace('"', "")
+              ).toFixed(2)}
+              €
+            </Text>
+          </Card>
+          <Card style={styles.images}>
+            <Text>
+              {" "}
+              NAME :{" "}
+              {JSON.stringify(data[4].name).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              SYMBOLE :{" "}
+              {JSON.stringify(data[4].symbol).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              RANK :{" "}
+              {JSON.stringify(data[4].rank).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              PRICE :{" "}
+              {JSON.stringify(data[4].price).replace('"', "").replace('"', "")}€
+            </Text>
+          </Card>
+          <Card style={styles.images}>
+            <Text>
+              {" "}
+              NAME :{" "}
+              {JSON.stringify(data[5].name).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              SYMBOLE :{" "}
+              {JSON.stringify(data[5].symbol).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              RANK :{" "}
+              {JSON.stringify(data[5].rank).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              PRICE :{" "}
+              {JSON.stringify(data[4].price).replace('"', "").replace('"', "")}€
+            </Text>
+          </Card>
+          <Card style={styles.images}>
+            <Text>
+              {" "}
+              NAME :{" "}
+              {JSON.stringify(data[6].name).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              SYMBOLE :{" "}
+              {JSON.stringify(data[6].symbol).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              RANK :{" "}
+              {JSON.stringify(data[6].rank).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              PRICE :{" "}
+              {parseInt(
+                JSON.stringify(data[6].price).replace('"', "").replace('"', "")
+              ).toFixed(2)}
+              €
+            </Text>
+          </Card>
 
-        <Button style={styles.buttonDoggo} onPress={handleRandomImage}>
-          <Text style={styles.textButton}>Doggo</Text>
-        </Button>
-      </View>
+          <Card style={styles.images}>
+            <Text>
+              {" "}
+              NAME :{" "}
+              {JSON.stringify(data[7].name).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              SYMBOLE :{" "}
+              {JSON.stringify(data[7].symbol).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              RANK :{" "}
+              {JSON.stringify(data[7].rank).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              PRICE :{" "}
+              {parseInt(
+                JSON.stringify(data[7].price).replace('"', "").replace('"', "")
+              ).toFixed(2)}
+              €
+            </Text>
+          </Card>
+          <Card style={styles.images}>
+            <Text>
+              {" "}
+              NAME :{" "}
+              {JSON.stringify(data[8].name).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              SYMBOLE :{" "}
+              {JSON.stringify(data[8].symbol).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              RANK :{" "}
+              {JSON.stringify(data[8].rank).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              PRICE :{" "}
+              {JSON.stringify(data[8].price).replace('"', "").replace('"', "")}€
+            </Text>
+          </Card>
+          <Card style={styles.images}>
+            <Text>
+              {" "}
+              NAME :{" "}
+              {JSON.stringify(data[9].name).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              SYMBOLE :{" "}
+              {JSON.stringify(data[9].symbol).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              RANK :{" "}
+              {JSON.stringify(data[9].rank).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              PRICE :{" "}
+              {parseInt(
+                JSON.stringify(data[9].price).replace('"', "").replace('"', "")
+              ).toFixed(2)}
+              €
+            </Text>
+          </Card>
+          <Card style={styles.images}>
+            <Text>
+              {" "}
+              NAME :{" "}
+              {JSON.stringify(data[10].name).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              SYMBOLE :{" "}
+              {JSON.stringify(data[10].symbol)
+                .replace('"', "")
+                .replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              RANK :{" "}
+              {JSON.stringify(data[10].rank).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              PRICE :{" "}
+              {JSON.stringify(data[4].price).replace('"', "").replace('"', "")}€
+            </Text>
+          </Card>
+          <Card style={styles.images}>
+            <Text>
+              {" "}
+              NAME :{" "}
+              {JSON.stringify(data[11].name).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              SYMBOLE :{" "}
+              {JSON.stringify(data[11].symbol)
+                .replace('"', "")
+                .replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              RANK :{" "}
+              {JSON.stringify(data[11].rank).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              PRICE :{" "}
+              {JSON.stringify(data[4].price).replace('"', "").replace('"', "")}€
+            </Text>
+          </Card>
+          <Card style={styles.images}>
+            <Text>
+              {" "}
+              NAME :{" "}
+              {JSON.stringify(data[12].name).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              SYMBOLE :{" "}
+              {JSON.stringify(data[12].symbol)
+                .replace('"', "")
+                .replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              RANK :{" "}
+              {JSON.stringify(data[12].rank).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              PRICE :{" "}
+              {JSON.stringify(data[4].price).replace('"', "").replace('"', "")}€
+            </Text>
+          </Card>
+          <Card style={styles.images}>
+            <Text>
+              {" "}
+              NAME :{" "}
+              {JSON.stringify(data[13].name).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              SYMBOLE :{" "}
+              {JSON.stringify(data[13].symbol)
+                .replace('"', "")
+                .replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              RANK :{" "}
+              {JSON.stringify(data[13].rank).replace('"', "").replace('"', "")}
+            </Text>
+            <Text>
+              {" "}
+              PRICE :{" "}
+              {JSON.stringify(data[4].price).replace('"', "").replace('"', "")}€
+            </Text>
+          </Card>
+        </View>
+      </ScrollView>
     </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#8ef6e4",
+    backgroundColor: "#737373",
     alignItems: "center",
     paddingTop: 75,
-    height: "25%",
   },
   mainTitle: {
-    color: "#9896f1",
+    color: "#BFDBFE",
     fontSize: 25,
     fontWeight: "bold",
+  },
+  bg: {
+    backgroundColor: "#737373",
   },
   title: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "#8ef6e4",
-  },
-  buttonDoggo: {
-    marginTop: 40,
-    backgroundColor: "#9896f1",
-    borderColor: "black",
+    backgroundColor: "#737373",
   },
   textBeforeButton: {
     fontSize: 32,
     fontWeight: "900",
-    color: "#9896f1",
+    color: "#BFDBFE",
     marginHorizontal: "5%",
-  },
-
-  textButton: {
-    color: "#fff",
-    fontWeight: "bold",
-    alignContent: "center",
-    alignItems: "center",
-    fontSize: 24,
   },
   images: {
     borderRadius: 10,
-    height: 250,
+    height: 100,
     width: 250,
-    marginHorizontal: "20%",
-    marginVertical: "10%",
+    marginHorizontal: "10%",
+    marginVertical: "3%",
+    backgroundColor: "#BFDBFE",
+    padding: "3%",
   },
 });
