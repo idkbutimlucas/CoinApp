@@ -1,6 +1,10 @@
-# CoinApp 🐶
+# CoinApp 🚀
 
-Awesome App in React to follow the price of your favorite coin 🚀
+Awesome App in React to follow the price of your favorite coin 🌝
+
+#About ⚛️
+
+This project is not finished but the major features are done. ✅
 
 ![2022-03-02 21 36 25](https://drive.google.com/drive/u/0/folders/1ZmeRe1aYNpllu6WBAovtH6fSFYG4IXtW)
 
@@ -10,7 +14,7 @@ Awesome App in React to follow the price of your favorite coin 🚀
 `yarn`
 `yarn start`
 
-# Expo Launch
+# Expo Launch 🚧
 
 https://expo.dev/@idkbutimlucas/DoggoApp
 
@@ -18,6 +22,6 @@ https://expo.dev/@idkbutimlucas/DoggoApp
 
 Link of API: https://api.nomics.com/
 
-# Forked by the DaoggoApp
+# Forked from DoggoApp 🐶
 
-Thx for your app @Corentyn
+https://github.com/Corentyn/DoggoApp
