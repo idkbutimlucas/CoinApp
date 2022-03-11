@@ -2,7 +2,7 @@
 
 Awesome App in React to follow the price of your favorite coin 🚀
 
-!(https://drive.google.com/drive/u/0/folders/1ZmeRe1aYNpllu6WBAovtH6fSFYG4IXtW)
+![2022-03-02 21 36 25](https://drive.google.com/drive/u/0/folders/1ZmeRe1aYNpllu6WBAovtH6fSFYG4IXtW)
 
 # How to install
 
