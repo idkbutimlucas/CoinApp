@@ -6,7 +6,7 @@ Awesome App in React to follow the price of your favorite coin 🌝
 
 This project is not finished but the major features are done. ✅
 
-![2022-03-12 01 54 45](https://user-images.githubusercontent.com/76565606/157996728-bf11bf52-e71a-436c-8573-71b59ff7cb90.gif)
+![2022-03-12 01 59 43](https://user-images.githubusercontent.com/76565606/157996963-94f33ebd-4397-4bde-aafc-4aea9a988711.gif)
 
 
 # How to install 🚧
