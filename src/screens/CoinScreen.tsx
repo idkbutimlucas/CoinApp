@@ -437,7 +437,7 @@ export function CoinScreen() {
               <Text style={styles.font}>
                 {" "}
                 PRICE :{" "}
-                {JSON.stringify(data[4].price)
+                {JSON.stringify(data[13].price)
                   .replace('"', "")
                   .replace('"', "")}
                 €
