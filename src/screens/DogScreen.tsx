@@ -6,8 +6,8 @@ import { useRandomDog } from "../hook/useRandomDog";
 
 export function DogScreen() {
   const [visible, setVisible] = useState(false);
-
-  const { isLoading, isError, data, refetch } = useRandomDog();
+  const { data } = useRandomDog();
+  const { isLoading, isError, refetch } = useRandomDog();
 
   function handleRandomImage() {
     setVisible(true);
