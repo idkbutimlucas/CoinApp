@@ -344,9 +344,11 @@ export function CoinScreen() {
               <Text style={styles.font}>
                 {" "}
                 PRICE :{" "}
-                {JSON.stringify(data[4].price)
-                  .replace('"', "")
-                  .replace('"', "")}
+                {parseInt(
+                  JSON.stringify(data[10].price)
+                    .replace('"', "")
+                    .replace('"', "")
+                ).toFixed(2)}
                 €
               </Text>
             </Card>
@@ -375,7 +377,7 @@ export function CoinScreen() {
               <Text style={styles.font}>
                 {" "}
                 PRICE :{" "}
-                {JSON.stringify(data[4].price)
+                {JSON.stringify(data[11].price)
                   .replace('"', "")
                   .replace('"', "")}
                 €
@@ -406,7 +408,7 @@ export function CoinScreen() {
               <Text style={styles.font}>
                 {" "}
                 PRICE :{" "}
-                {JSON.stringify(data[4].price)
+                {JSON.stringify(data[12].price)
                   .replace('"', "")
                   .replace('"', "")}
                 €
