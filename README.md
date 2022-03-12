@@ -17,7 +17,7 @@ This project is not finished but the major features are done. ✅
 
 # Expo Launch 📱
 
-https://expo.dev/@idkbutimlucas/DoggoApp
+https://expo.dev/@idkbutimlucas/coinapp
 
 # API 🤯
 
