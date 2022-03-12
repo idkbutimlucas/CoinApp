@@ -8,6 +8,6 @@ async function fetchData() {
   return json;
 }
 
-export function useRandomDog() {
-  return useQuery(["doggo"], fetchData);
+export function useCoinStats() {
+  return useQuery(["coin"], fetchData);
 }
