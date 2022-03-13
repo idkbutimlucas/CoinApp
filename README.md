@@ -22,7 +22,3 @@ https://expo.dev/@idkbutimlucas/coinapp
 # API 🤯
 
 Link of API: https://api.nomics.com/
-
-# Forked from DoggoApp 🐶
-
-https://github.com/Corentyn/DoggoApp
